@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+      <div class="card">
+          <div class="card-header">
+            <div class="row">
+              <div class ="col-md-6">
+                <p>New Client</p>
+              </div>
+              <div class ="col-md-6" style="text-align: right;">
+                <a routerLink="/viewpro">Back</a>
+                </div>
+
+            </div>
+          <div class="card-body">
+              <form #modcli="ngForm" (ngSubmit)="updatepro()" >
+              <label>Project Id </label>
+              <input type="text"  [(ngModel)]="pro.id" name= "proid" class="form-control" disabled="" />
+            <br/>
+              <label> Project Name </label>
+              <input type="text"  [(ngModel)]="pro.ProjectName" name="proname" class="form-control" />
+
+            <br/>
+              <label>Project Duration</label>
+              <input type="text"  [(ngModel)]="pro.Duration" name = "produration" class="form-control" />
+
+            <br/>
+              <label>Client Id</label>
+              <input type="text"  [(ngModel)]="pro.ClientId" name = "proclientid" class="form-control"  />
+
+              <br />
+              <input type="submit"  value="modify Project" class="btn btn-success" />
+          </form>
+
+
+      </div>
+  </div>
+  <div class="col-md-3"></div>
+</div>

@@ -1,0 +1,53 @@
+<app-home></app-home>
+<br/>
+
+<div class="row">
+  <div class="col-md-4">
+    <app-add-meetings></app-add-meetings>
+  </div>
+
+ 
+  <div class="col-md-8">
+    <div class="card">
+      <div class="card-header">
+        <div class="row">
+          <div class="col-md-6">
+            <h4>All Meetings Info</h4>
+          </div>
+          <div class="col-md-6" style="text-align: right;">
+            <a routerLink="/addmeet" class="btn btn-primary">New Meeting</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Meeting ID</th>
+              <th>Meeting Topic</th>
+              <th>No of Persons</th>
+              <th>Start Date Time</th>
+              <th>Client ID</th>
+              <th>Operations</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let meet of allMeet">
+              <td>{{meet.id}}</td>
+              <td>{{meet.MeetingTopic}}</td>
+              <td>{{meet.No_of_Persons}}</td>
+              <td>{{meet.Start_Date_Time}}</td>
+              <td>{{meet.ClientID}}</td>
+              <td>
+                <button class="btn btn-success" (click)="getModMeetPage(meet.id)">Modify Meeting</button>
+                &nbsp;&nbsp;
+                <button class="btn btn-danger" (click)="delMeet(meet.id)">Delete Meeting</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

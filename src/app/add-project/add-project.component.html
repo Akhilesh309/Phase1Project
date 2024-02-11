@@ -1,0 +1,34 @@
+<div class="row justify-content-center mt-4">
+  <div class="col-md-6">
+    <div class="card" style="background-color: #eaf6ff;">
+      <div class="card-header bg-primary text-white">
+        <div class="d-flex justify-content-between align-items-center">
+          <h5 class="mb-0">New Project</h5>
+          <a routerLink="/viewpro" class="btn btn-light">Back</a>
+        </div>
+      </div>
+      <div class="card-body">
+        <form #regcli="ngForm" (ngSubmit)="ProjectSaving()">
+          <div class="form-group">
+            <label for="proid">Project ID</label>
+            <input type="text" [(ngModel)]="pro.id" name="proid" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="poname">Project Name</label>
+            <input type="text" [(ngModel)]="pro.ProjectName" name="poname" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="produration">Project Duration</label>
+            <input type="text" [(ngModel)]="pro.Duration" name="produration" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="procliid">Client ID</label>
+            <input type="text" [(ngModel)]="pro.ClientId" name="procliid" class="form-control">
+          </div>
+          <button type="submit" class="btn btn-success btn-block">Add Project</button>
+        </form>
+        <div [innerHTML]="msg"></div>
+      </div>
+    </div>
+  </div>
+</div>

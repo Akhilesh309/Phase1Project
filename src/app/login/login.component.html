@@ -1,0 +1,36 @@
+<div class="row justify-content-center mt-5">
+  <div class="col-md-4">
+    <div class="card rounded-lg border-0" style="background:linear-gradient(to right, #1ed2ff, #f7bdbd);;">
+      <div class="card-header bg-transparent text-dark text-center">
+        <h4>Login Here</h4>
+      </div>
+      <div class="card-body">
+        <form #regstu="ngForm" (ngSubmit)="UserCheck()">
+          <div class="form-group">
+            <label for="username" class="text-dark">Username/Email</label>
+            <input type="text" [(ngModel)]="username" name="username" class="form-control" #uname="ngModel" required />
+            <div class="invalid-feedback" *ngIf="uname.touched && uname.invalid">
+              Username should not be blank
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="pswd" class="text-dark">Password</label>
+            <input type="password" [(ngModel)]="pswd" name="pswd" class="form-control" #pwd1="ngModel" required />
+            <div class="invalid-feedback" *ngIf="pwd1.touched && pwd1.invalid">
+              Password should not be blank
+            </div>
+          </div>
+          <br/>
+
+
+          <div class="text-center">
+            <button type="submit" class="btn btn-success btn-block rounded-pill" style="background-color: #8612e6; padding: 12px 20px; font-size: 16px;">Login</button>
+          </div>
+        </form>
+
+        <div [innerHTML]="msg" class="text-center mt-3" style="color:red; font-weight: bold;"></div>
+      </div>
+    </div>
+  </div>
+</div>

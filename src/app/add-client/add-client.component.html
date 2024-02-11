@@ -1,0 +1,46 @@
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+      <div class="card">
+          <div class="card-header">
+            <div class="row">
+              <div class ="col-md-6">
+                <p>New Client</p>
+              </div>
+              <div class ="col-md-6" style="text-align: right;">
+                <a routerLink="/viewall">Back</a>
+                </div>
+
+            </div>
+          <div class="card-body">
+              <form #regcli="ngForm" (ngSubmit)="ClientSaving()" >
+              <label>Client ID </label>
+              <input type="text"  [(ngModel)]="cli.id" name= "clientid" class="form-control" />
+            <br/>
+              <label> Name </label>
+              <input type="text"  [(ngModel)]="cli.name" name="cliname" class="form-control" />
+
+            <br/>
+              <label>Address</label>
+              <input type="text"  [(ngModel)]="cli.Address" name = "cliaddress" class="form-control" />
+
+            <br/>
+              <label>Email</label>
+              <input type="text"  [(ngModel)]="cli.Email" name = "cliemail" class="form-control"  />
+
+            <br/>
+
+              <label>Password</label>
+              <input type="text"  [(ngModel)]="cli.Password" name = "clipassword" class="form-control"  />
+
+
+
+              <br />
+              <input type="submit"  value="Add Client" class="btn btn-success" />
+          </form>
+          <div [innerHTML]="msg"></div>
+          </div>
+      </div>
+  </div>
+  <div class="col-md-3"></div>
+</div>

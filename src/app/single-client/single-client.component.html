@@ -1,0 +1,38 @@
+<div *ngIf="client" class="container mt-4">
+  <div class="card">
+    <div class="card-header bg-primary text-white">
+      <h2 class="mb-0">{{ client.name }} Details</h2>
+
+    </div>
+
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-6">
+          <p class="mb-2"><strong>Email:</strong> {{ client.Email }}</p>
+          <p><strong>Address:</strong> {{ client.Address }}</p>
+        </div>
+        <div class="col-md-6">
+          <h3 class="mb-3">Projects:</h3>
+          <ul class="list-group">
+            <li *ngFor="let project of projects" class="list-group-item">
+              {{ project.ProjectName }} ({{ project.Duration }})
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <hr class="my-4">
+
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="mb-3">Meetings:</h3>
+          <ul class="list-group">
+            <li *ngFor="let meeting of meetings" class="list-group-item">
+              {{ meeting.MeetingTopic }} ({{ meeting.Start_Date_Time }})
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

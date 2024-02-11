@@ -1,0 +1,45 @@
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-10">
+      <div class="card">
+          <div class="card-header">
+            <div class="row">
+              <div class ="col-md-6">
+                <p>New Client</p>
+              </div>
+
+
+
+            </div>
+          <div class="card-body">
+              <form #regcli="ngForm" (ngSubmit)="MeetingSaving()" >
+              <label>Meeting ID </label>
+              <input type="text"  [(ngModel)]="meet.id" name= "meetid" class="form-control" />
+            <br/>
+              <label>Meeting Topic </label>
+              <input type="text"  [(ngModel)]="meet.MeetingTopic" name="topic" class="form-control" />
+
+            <br/>
+              <label>No_of_Person</label>
+              <input type="text"  [(ngModel)]="meet.No_of_Persons" name = "no_of_person" class="form-control" />
+
+            <br/>
+              <label>Start_Date_Time</label>
+              <input type="datetime-local" [(ngModel)]="meet.Start_Date_Time" name="date" class="form-control" />
+
+            <br/>
+
+              <label>ClientID</label>
+              <input type="text"  [(ngModel)]="meet.ClientID" name = "mcientid" class="form-control"  />
+
+
+
+              <br />
+              <input type="submit"  value="Add Meeting" class="btn btn-success" />
+          </form>
+          <div [innerHTML]="msg"></div>
+          </div>
+      </div>
+  </div>
+  <div class="col-md-1"></div>
+</div>

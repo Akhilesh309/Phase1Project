@@ -1,0 +1,22 @@
+/* styles.scss */
+/* Add custom styles to enhance the appearance */
+
+.navbar {
+  background-color: #f8f9fa; /* Light background color */
+  padding: 10px 20px;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  color: #007bff; /* Brand color */
+}
+
+.navbar-nav .nav-link {
+  font-size: 1.2rem;
+  color: #495057; /* Link color */
+  margin-right: 15px;
+}
+
+.navbar-nav .nav-item.active .nav-link {
+  color: #007bff; /* Active link color */
+}

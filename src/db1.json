@@ -1,0 +1,101 @@
+{
+  "Clients": [
+    {
+      "id": "1",
+      "name": "Akhilesh",
+      "Address": "D.No.121-A",
+      "Email": "akhilesh1@gmail.com",
+      "Password": "ak12345"
+    },
+    {
+      "id": "2",
+      "name": "primta",
+      "Address": "d.a.no.12",
+      "Email": "pr@gmail.com",
+      "Password": "pr1234"
+    },
+    {
+      "id": "3",
+      "name": "golu",
+      "Address": "d.a.no.12",
+      "Email": "golu@gmail.com",
+      "Password": "g@123"
+    }
+  ],
+  "Projects": [
+    {
+      "id": "1",
+      "ProjectName": "Library",
+      "Duration": "4 Months",
+      "ClientId": 1
+    },
+    {
+      "id": "2",
+      "ProjectName": "web app",
+      "Duration": "2 weeks",
+      "ClientId": "2"
+    },
+    {
+      "id": "3",
+      "ProjectName": "security app",
+      "Duration": "1 month",
+      "ClientId": "3"
+    }
+  ],
+  "Proj_Tasks": [
+    {
+      "id": "1",
+      "TaskName": "Login",
+      "TaskDescription": "Create a Login button",
+      "ProjectId": 1
+    },
+    {
+      "id": "2",
+      "TaskName": "client table",
+      "TaskDescription": "create a table containing client info",
+      "ProjectId": "2"
+    },
+    {
+      "id": "3",
+      "TaskName": "add security",
+      "TaskDescription": "add security features",
+      "ProjectId": "3"
+    },
+    {
+      "id": "4",
+      "TaskName": "authentication",
+      "TaskDescription": "create an authentication page",
+      "ProjectId": "2"
+    }
+  ],
+  "Client_Meetings": [
+    {
+      "id": "1",
+      "MeetingTopic": "Project disc",
+      "No_of_Persons": 1,
+      "Start_Date_Time": "2024-02-21T01:00",
+      "ClientID": "1"
+    },
+    {
+      "id": "2",
+      "MeetingTopic": "vghj",
+      "No_of_Persons": "10",
+      "Start_Date_Time": "2024-02-11T18:02",
+      "ClientID": "2"
+    },
+    {
+      "id": "3",
+      "MeetingTopic": "work distribution ",
+      "No_of_Persons": "8",
+      "Start_Date_Time": "2024-02-19T19:03",
+      "ClientID": "3"
+    },
+    {
+      "id": "4",
+      "MeetingTopic": "hjh",
+      "No_of_Persons": "10",
+      "Start_Date_Time": "2024-02-28T08:03",
+      "ClientID": "1"
+    }
+  ]
+}

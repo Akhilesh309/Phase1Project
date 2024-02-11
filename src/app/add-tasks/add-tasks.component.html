@@ -1,0 +1,42 @@
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+      <div class="card">
+          <div class="card-header">
+            <div class="row">
+              <div class ="col-md-6">
+                <p>New Client</p>
+              </div>
+              <div class ="col-md-6" style="text-align: right;">
+                <a routerLink="/viewtask">Back</a>
+                </div>
+
+            </div>
+          <div class="card-body">
+              <form #regtask="ngForm" (ngSubmit)="TaskSaving()" >
+              <label>Task ID </label>
+              <input type="text"  [(ngModel)]="pt.id" name= "taskid" class="form-control" />
+            <br/>
+              <label>Task Name </label>
+              <input type="text"  [(ngModel)]="pt.TaskName" name="taskname" class="form-control" />
+
+            <br/>
+              <label>Task Description</label>
+              <input type="text"  [(ngModel)]="pt.TaskDescription" name = "taskdescription" class="form-control" />
+
+            <br/>
+              <label>Project Id</label>
+              <input type="text"  [(ngModel)]="pt.ProjectId" name = "projectid" class="form-control"  />
+
+            <br/>
+
+              <br />
+              <input type="submit"  value="Add Task" class="btn btn-success" />
+          </form>
+          <div [innerHTML]="msg"></div>
+          </div>
+      </div>
+  </div>
+  <div class="col-md-3"></div>
+</div>
+

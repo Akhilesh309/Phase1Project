@@ -1,0 +1,65 @@
+<style>
+  .navbar-light .navbar-nav .nav-link:hover,
+  .navbar-light .navbar-nav .nav-link.active {
+    color: #060606;
+  }
+
+  .navbar {
+    box-shadow: 0 0 10px rgba(162, 28, 28, 0.26);
+  }
+
+  .navbar-brand {
+    color: #2c3e50;
+    font-weight: bold;
+    font-size: 24px;
+  }
+
+  .navbar-nav .nav-link {
+    color: #000000;
+    font-size: 20px;
+    margin-right: 20px;
+  }
+
+  .navbar-toggler-icon {
+    background-color: #0080ff;
+  }
+
+  .active {
+    color: #fcfafa;
+  }
+</style>
+
+<div class="container-fluid">
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #bcfafc;">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/welcome">Welcome</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/viewall">Clients</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/viewpro">Projects</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/viewtask">Project Tasks</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/viewmeet">Meetings</a>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/login">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
